@@ -27,7 +27,7 @@ class PostsController extends Controller
      */
     public function favoritePost(Post $post)
     {
-        Auth::user()->favorites()->atach($post->id);
+        Auth::user()->favorites()->attach($post->id);
 
         return back();
     }

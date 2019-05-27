@@ -5,29 +5,25 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="page-header">
-                    <h3>All Posts</h3>
+                    <h3>My Favorites</h3>
                 </div>
-                @forelse($posts as $post)
+                @forelse($myFavorites as $myFavorite)
                     <div class="card">
                         <div class="card-header">
-                            {{ $post->title }}
+                            {{ $myFavorite->title }}
                         </div>
-
                         <div class="card-body">
-                            {{ $post->body }}
+                            {{ $myFavorite->body }}
                         </div>
                         @if(Auth::check())
                             <div class="card-footer">
-
-                                <favorite :post={{ $post->id }} :favorited={{ $post->favorited() ? 'true' : 'false' }}></favorite>
+                                <favorite :post={{ $myFavorite->id }} :favorited={{ $myFavorite->favorited() }}></favorite>
                             </div>
                         @endif
-
                     </div>
                 @empty
-                    <p>No post created.</p>
+                    <p>You have no favorite posts.</p>
                 @endforelse
-                {{ $posts->links() }}
             </div>
         </div>
     </div>

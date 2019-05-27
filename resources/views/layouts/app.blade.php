@@ -71,10 +71,10 @@
                     @endguest
                 </ul>
             </div>
-            <li>
-                <a href="{{ url('my_favorites') }}">My Favorites</a>
-            </li>
         </div>
+        <li>
+            <a href="{{ url('my_favorites') }}">My Favorites</a>
+        </li>
     </nav>
 
     <main class="py-4">
