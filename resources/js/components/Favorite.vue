@@ -1,10 +1,10 @@
 <template>
     <span>
         <a href="#" v-if="isFavorited" @click.prevent="unFavorite(post)">
-            <i class="fa fa-heart"></i>
+            <font-awesome-icon   :icon="['fas', 'heart']"/>
         </a>
         <a href="#" v-else @click.prevent="favorite(post)">
-            <i class="fa fa-heart-o"></i>
+            <font-awesome-icon  :icon="['far', 'heart']" />
         </a>
     </span>
 </template>

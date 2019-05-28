@@ -5,6 +5,11 @@
  */
 
 import Favorite from "./components/Favorite";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 require('./bootstrap');
 
@@ -22,6 +27,10 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 // Vue.component('favorite', require('./components/Favorite.vue'));
+
+library.add(far, fab, fas);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

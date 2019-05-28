@@ -22,5 +22,12 @@
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.18",
+        "@fortawesome/free-brands-svg-icons": "^5.8.2",
+        "@fortawesome/free-regular-svg-icons": "^5.8.2",
+        "@fortawesome/free-solid-svg-icons": "^5.8.2",
+        "@fortawesome/vue-fontawesome": "^0.1.6"
     }
 }
